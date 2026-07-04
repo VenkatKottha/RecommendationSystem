@@ -83,32 +83,46 @@ Combines collaborative filtering with content-based recommendations to improve a
 # Project Structure
 
 ```text
-recommendation-system/
+RECOMMENDATIONSYSTEM/
 │
-├── data/
-│   ├── customers.csv
-│   ├── products.csv
-│   ├── orders.csv
-│   ├── ratings.csv
-│   └── interactions.csv
+├── docker-compose.yml
+├── .env
+├── README.md
+│
+├── airflow/
+│   ├── Dockerfile
+│   ├── requirements.txt
+│   ├── dags/
+│   ├── plugins/
+│   └── scripts/
+│
+├── mlflow/
+│   ├── Dockerfile
+│   ├── requirements.txt
+│   └── artifacts/
+│
+├── api/
+│   ├── Dockerfile
+│   ├── requirements.txt
+│   ├── app/
+│   └── main.py
+│
+├── application/
+│   ├── Dockerfile
+│   ├── package.json
+│   ├── src/
+│   └── nginx.conf
+│
+├── database/
+│   ├── postgres/
+│   │      └── init.sql
+│   └── mongo/
+│          └── init.js
 │
 ├── models/
-│
 ├── notebooks/
-│
-├── src/
-│   ├── data_loader.py
-│   ├── preprocessing.py
-│   ├── feature_engineering.py
-│   ├── content_based.py
-│   ├── collaborative.py
-│   ├── hybrid.py
-│   ├── evaluation.py
-│   └── api.py
-│
-├── app.py
-├── requirements.txt
-└── README.md
+├── data/
+└── shared/
 ```
 
 ---
